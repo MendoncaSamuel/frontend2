@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <style>
+        body{
+            color: coral;
+            background-color: rgb(31, 15, 136);
+        }
+    </style>
+</head>
+<body>
+    <h1>Pizza</h1>
+    <img id="pizza-image" src="https://t4.ftcdn.net/jpg/05/74/68/47/360_F_574684775_Vw9D3VkXofqdoeWdPkI6ORTafqA6zhqg.jpg">
+    <br>
+    <br>
+    <p id="fatias">Fatias: 8</p>
+    <button onclick="eatSlice()">COMER PIZZA</button>
+    
+    <script>
+        let numSlices = 8;
+
+        function eatSlice(){
+            while(numSlices > 0 ){
+                numSlices--;
+
+                updateStatus();
+
+                if(numSlices === 0) {
+                    alert("Não há mais fatias!")
+                }
+                break;
+            }
+        }
+
+        function updateStatus(){
+            let statusElement = document.getElementById("status");
+            statusElement.textContent = `Fatias Restantes ${numSlices}`
+
+        }
+
+    </script>
+</body>
+</html>

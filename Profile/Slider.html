@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Slider Show</h1>
+    <!--1.Crie uma div com classe de nome container-->
+    <!--2.Dentro da div de classe container crie uma div com nome de classe meuSlide-->
+    <!--3. Dentro dessa div meuSlide, crie mais uma div com nome de classe "numero"e insira o valor 1/4-->
+    <!--4.Insira a tag da imagem com a imagem 1 com largura em 100%-->
+    <!--5. crie mais uma div com nome de class "texti" com o valor "Imagem 1"-->
+
+    <!--Repita os passos de 1 a 5 para as proximas 4 imagens...-->
+
+    <!--Crie dois links que representarão os botões anterios e próximo com as classes "prev" e "next" respectivamente-->
+
+    <!--Feche a div container-->
+
+    <!--Os pontos circulares
+    -> Crie uma div com estilização inline de alinhamento de texto centralizado
+    -> Crie 4 spans com classe de nome "ponto" -->
+    
+    <!--  IMAGEM 1   -->
+    <div class="container">
+        <div class="meuSlide fade">
+            <img src="Neymar1.jpg" style="width: 100%;" alt="Neymar">
+            <div class="numero">1/4</div>
+            <div class="texto">Imagem 1</div>
+        </div>
+
+    <!--  IMAGEM 2  -->
+    
+        <div class="meuSlide fade">
+            <img src="Praia2.jpg" style="width: 100%;" alt="Praia">
+            <div class="numero">2/4</div>
+            <div class="texto">Imagem 2</div>
+        </div>
+ 
+     <!--  IMAGEM 3  -->
+   
+        <div class="meuSlide fade">
+            <img src="Imagem3.jpg" style="width: 100%;" alt="">
+            <div class="numero">3/4</div>
+            <div class="texto">Imagem 3</div>
+        </div>
+    
+
+    <!--  IMAGEM 4  -->
+    
+        <div class="meuSlide fade">
+            <img src="AuroraBoreal4.jpeg" style="width: 100%;" alt="Aurora Boreal">
+            <div class="numero">4/4</div>
+            <div class="texto">Imagem 4</div>
+        </div>
+
+        <!-- FIM IMAGENS-->
+
+        <a class="prev" title="Anterior" onclick="slideseta(-1)">&#10094;</a>
+        <a class="next" title="Próxima" onclick="slideseta(1)">&#10095;</a>
+
+    </div>
+    
+    <div style="text-align: center;">
+        <span class="ponto" onclick="slideatual(1)"> </span>
+        <span class="ponto" onclick="slideatual(2)"> </span>
+        <span class="ponto" onclick="slideatual(3)"> </span>
+        <span class="ponto" onclick="slideatual(4)"> </span>
+    </div>
+
+    <script src="main.js"> </script>
+
+</body>
+</html>

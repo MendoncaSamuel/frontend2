@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Compras</title>
+    <style>
+       body{
+        background-color: midnightblue;
+       }
+       h1{
+            color:coral;
+        }
+        ul{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    <ul id="listacompra"></ul>
+    <input type="text" id="itens" placeholder="Adicionar um item">
+    <button onclick="adicionaritem()">Adicionar</button>
+    <script>
+        //Armazenamento de lista de compras
+        var listashop = [];
+        //Funcao para adicionar um item na lista
+        function adicionaritem(){
+            let itementrada = document.getElementById('itens')
+            let item = itens.value.trim();
+            if(item !== ""){
+                listashop.push(item);
+                uptadeListashop();
+                itens.value="";
+            }
+        }
+        //Funcao para atualizar a lista de compras na página
+
+        function uptadeListashop(){
+            let elementolista = document.getElementById("listacompra");
+            elementolista.innerHTML = '';
+
+            for (let i=0; i<listashop.length; i++){
+                let listaitem = document.createElement("li");
+                listaitem.textContent = listashop[i];
+                elementolista.appendChild(listaitem);
+            }
+        }
+
+    </script>
+</body>
+</html>

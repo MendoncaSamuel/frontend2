@@ -1,0 +1,144 @@
+/*
+Crie uma estilização universal border box
+Crie a classe container com:
+-> maximo de largura 1000px
+-> posiçao relativa 
+-> margem automatica 
+
+Crie a classe meuSlide: 
+-> display none
+
+Crie as classes prev e next separadas por vírgulas com
+->pointer no cursor
+->posiçao absoluta
+-> topo em 50%
+-> largura automatica
+-> topo de margem em - 22px
+-> padding de 16px
+-> cor branca
+-> fonte em negrito
+-> tamanho da fonte em 18px
+-> transicao em 0.6s ease
+-> borda com raio de 0 3px 3px 0
+-> user-select: none
+*/
+
+
+.slideshow-container{
+    width: 550px;
+    position: relative;
+    margin: auto;
+}
+.meuSlide{
+    display: none;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font: bold;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/*
+Crie novamente a classe .next com: 
+-> direita em 0;
+-> raio de borda em 0 3px 3px 0
+
+Crie a classe .prev e .next separadas por vírgulas utilizando
+hover com background-color cum um pouco de transparencia
+ 
+Cria a classe .texto com:
+-> cor: de sua prefencia
+-> tamanho da fonte em 15px
+-> padding em 8px e 12px
+-> posicao absoluta
+-> bottom em 8px
+-> largura 100%
+-> alnhamento de texto no centro
+
+Crie a classe numero com:
+-> cor de sua preferencia
+-> tamanho de fonte 12px
+-> padding em 8px 12px
+-> posicao absoluta
+-> topo em 0
+*/
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px ;
+}
+.next:hover, .prev:hover{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.texto{
+    color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numero{
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/*
+Crie a classe ponto com
+-> cursor com pointer
+-> altura em 15px
+-> largura em 15px
+-> margem em 0 2px
+-> background-color: preferencia
+-> borda com raio em 50%
+-> display inline-block
+-> transition background-color 0.6 ease
+
+
+---Ative a classe dot com hover e backgrounde de sua preferencia
+
+Crie uma classe de nome fade com:
+-> animation-name: fade
+-> animation-duration: 1.5s
+
+Crie a anotacao @keyframes fade com
+from {opacity: 0.4}
+to{opacity: 1}
+*/
+*{
+    box-sizing:border-box
+}
+.ponto{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6 ease ;
+}
+.dot{
+    background-color: rgb(0, 0, 0);
+}
+.active, .ponto:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1;}
+}

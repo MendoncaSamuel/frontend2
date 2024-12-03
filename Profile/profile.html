@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        .accordion-collapse {
+            transition: height 0.7s ease !important; /* Animação mais lenta */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-3 bg-dark">
+             <h2 class="text-light ">PROFILE PAGE</h2>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="portifolio.html">Portfólio</a></li>
+                        <li><a class="dropdown-item" href="faleConosco.html">Fale Conosco</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Fechar Menu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="text-center mt-4"> Samuel Urbano</h1>
+            <ins><h4 class="text-center">Perfil Profissional</h4></ins>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col d-flex justify-content-center">
+                <div class="card" style="width: 400px;">
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#meuModal" >
+                        Ver Perfil 
+                    </button>
+                    <div class="modal" id="meuModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Perfil</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="WhatsApp Image 2024-12-02 at 14.15.46.jpeg" alt="" width="100%">
+                                    <p>
+                                        Sou Samuel, uma pessoa que gosta muito de aprender coisas novas e compartilhar conhecimento.
+                                         Gosto de explorar diferentes áreas, como tecnologia, cultura e educação, 
+                                        e estou sempre em busca de encontrar as  melhores soluções para os problemas que existirem.
+                                    </p>
+                                                                        </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+        <div class="accordion mt-5 " id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Experiência Profissional
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                           <li>Estudante</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HABILIDADES -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Habilidades
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Pacote Office - Intermediário</li>
+                            <br>
+                            <li>Designer - Photoshop e Canva</li>
+                            <br>
+                            <li>Inglês Intermediário</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMAÇÃO -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Formação
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Desenvolvedor Back-End (Java Swing, MySQL, Eclipse) </li>
+                            <br>
+                            <li>Programação Oracle - Java Foundation</li>
+                            <br>
+                            <li>Desenvolvedor Front-End (Java Script, HTML, CSS)</li>
+                            <br>
+                            <li>Spring MVC Web Development</li>
+                            <br>
+                            <li>Ensino Médio com habilitação técnica em Desenvolvimento de Sistemas</li>
+                            <br>
+                            <li>Inglês - Yazigi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="modal fade" id="socialModal" tabindex="-1" aria-labelledby="socialModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="socialModalLabel">Redes Sociais</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <a href="https://x.com/s4mucxz__" target="_blank" class="btn btn-outline-dark m-2"><i class="bi bi-twitter-x"></i>  Twitter</a>
+                        <a href="https://www.instagram.com/samucxz_/" target="_blank" class="btn btn-outline-danger m-2"><i class="bi bi-instagram">    Instagram</i></a>
+                        <a href="https://www.linkedin.com/in/samuel-urbano-mendon%C3%A7a-573470211/" target="_blank" class="btn btn-outline-info m-2" > <i class="bi bi-linkedin"></i>  LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <button type="button" class="btn btn-primary mt-1.5" data-bs-toggle="modal" data-bs-target="#socialModal">
+            Contatos
+        </button>
+    </footer>
+    
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        // Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="notificacao"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =>
+        new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+</html>
